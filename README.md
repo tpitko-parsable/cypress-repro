@@ -19,7 +19,8 @@ __Actual__: time2 is significantly lower than time1
 
 __Expected__: time2 is approximately the same as time1 
 
-
+ ![./docs/first_run.png](./docs/first_run.png)
+ ![./docs/second_run.png](./docs/second_run.png)
 
 ## Available Scripts
 
