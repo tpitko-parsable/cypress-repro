@@ -1,5 +1,26 @@
 This project was bootstrapped with [Create React App with Cypress](https://github.com/cypress-io/cra-template-cypress).
 
+Repository to reproduce cypress slowness on first start
+
+Application is created from template, it requests https://www.google-analytics.com/analytics.js in <head> tag
+
+#### Preconditions: 
+ - install packages by `npm i`
+ 
+#### Steps to reproduce: 
+1. start dev server in terminal by `npm start`
+2. in different terminal window start cypress GUI by `npm run cy:open`
+3. select `app.spec.js` test in GUI and click on it -> browser opened and test started 
+4. remember time of test execution - time1
+5. start test again by `R` on by clicking on Run button 
+6. remember tests execution time again - time2
+
+__Actual__: time2 is significantly lower than time1 
+
+__Expected__: time2 is approximately the same as time1 
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -37,11 +58,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### `npm cypress:open`
+### `npm run cy:open`
 
 Opens the Cypress GUI
 
-### `npm cypress:run`
+### `npm run cy:run`
 
 Runs Cypress CLI
 
